@@ -1,2 +1,2 @@
-from . import db
-from . import shedule
+# from . import db
+# from . import shedule
