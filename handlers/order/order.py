@@ -8,12 +8,16 @@ from utils import req
 
 # Sending messages with info about orders
 
+
 @dp.message_handler(commands=['order'], state='*')
 async def orders(message: Message):
-    keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
-    button = KeyboardButton("Оформить заказ", web_app=WebAppInfo(url="https://dusky-fox-y.github.io/MiniSite/"))
-    keyboard.add(button)
-    await message.answer("Вот кнопочка для отправки заказа", reply_markup=keyboard)
+    if req.check(message.from_user.id):
+        keyboard = ReplyKeyboardMarkup(resize_keyboard=True)
+        button = KeyboardButton("Оформить заказ", web_app=WebAppInfo(url="https://dusky-fox-y.github.io/MiniSite/"))
+        keyboard.add(button)
+        await message.answer("Вот кнопочка для отправки заказа", reply_markup=keyboard)
+    else:
+        await message.answer("Ой кажется вы ещё не прошли регистрацию")
 
 
 @dp.message_handler(content_types=["web_app_data"])
