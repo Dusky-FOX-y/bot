@@ -7,8 +7,7 @@ from utils import req
 
 @dp.message_handler(commands=['test'], state='*')
 async def orders(message: Message):
-    asd = message.text.split(" ")
-    if req.add_good(asd[1], asd[2]):
-        await message.answer("Good succesfully added")
-    else:
-        await message.answer("Some issues handled")
+    print(message.from_user)
+    # req.reg_new_acc(message.from_user.id)
+    await message.answer("Соси")
+    pass

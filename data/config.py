@@ -1,3 +1,2 @@
-BOT_TOKEN = "6255609643:AAF20r-iiY_UPW7RsexU6Otxa4AJAvVxmqU"
-database_name = 'DRIVER={SQL Server Native Client 11.0};' 'Server=localhost\SQLEXPRESS;' 'Database=Sheduler;' 'Trusted_Connection=Yes;'
-connection_str = 'http://127.0.0.1:8000/'
+BOT_TOKEN = "6207815331:AAGnc6P773ofbtdU8YAfqQr8-L_475C6ViI"
+connection_str = 'http://176.99.12.178:8000/'

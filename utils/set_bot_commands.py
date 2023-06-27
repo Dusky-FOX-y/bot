@@ -3,29 +3,18 @@ from aiogram.types import BotCommand
 
 async def set_default_commands(dp):
     await dp.bot.set_my_commands([
-        # Realized
+        
+        # TODO
+
         BotCommand(
-            "create",
-            "Создать задачу"
+            "start",
+            "Зарегистрироваться"
         ),
-        #Doing
+
+        #TODO
+
         BotCommand(
-            "edit",
-            "Редактировать задачу"
-        ),
-        #Realized
-        BotCommand(
-            "delete",
-            "Удалить задачу"
-        ),
-        #Realized
-        BotCommand(
-            "list",
-            "Отобразить список поставленых задач"
-        ),
-        #Realized
-        BotCommand(
-            "cancel",
-            "Отменить операцию"
-        ),
+            "order",
+            "Создать заказ"
+        )
     ])
